@@ -19,8 +19,6 @@ public class Arithmetic {
         return (num1 > num2 ? num1 : num2);
     }
 
-    public int min () {
-        return (num1 < num2 ? num1 : num2);
-    }
+    public int min () { return (num1 < num2 ? num1 : num2); }
 
 }

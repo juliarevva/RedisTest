@@ -10,6 +10,6 @@ public class Main {
         System.out.println(arithmetic.sum());
         System.out.println(arithmetic.mult());
         System.out.println(arithmetic.max());
-        System.out.println(arithmetic.min());
+        // System.out.println(arithmetic.min());
     }
 }
