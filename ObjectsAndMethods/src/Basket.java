@@ -31,7 +31,13 @@ public class Basket {
         Basket.count = Basket.count + count;
     }
 
-//
+    public void add(String name, int price) {
+        add(name, price, 1);
+    }
+
+    public void add(String name, int price, int count) {
+        add(name, price, 1, 0);
+    }
 
     public void add(String name, int price, int count, double weight) {
         boolean error = false;
@@ -49,7 +55,7 @@ public class Basket {
         }
 
         items = items + "\n" + name + " - " +
-            count + " pcs - " + price + "$";
+                count + " pcs - " + price + "$";
         totalPrice = totalPrice + count * price;
         totalWeight = totalWeight + weight * count;
     }
@@ -77,7 +83,7 @@ public class Basket {
             System.out.println("Your items is full");
         } else {
             System.out.println(items);
-            System.out.println("Total Price " + totalPrice + "$" + "\n" + "Total Weight " + totalWeight +" gr");
+            System.out.println("\n" + "Total Price " + totalPrice + "$" + "\n" + "Total Weight " + totalWeight +" gr");
         }
     }
 }
