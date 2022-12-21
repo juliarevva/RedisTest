@@ -30,6 +30,18 @@ public class Cargo {
         return new Cargo(dimensions, weight, deliveryAddress, canBeFlipped, regNumber, fragile);
     }
 
+    public Cargo setCanBeFlipped (boolean canBeFlipped) {
+        return new Cargo(dimensions, weight, deliveryAddress, canBeFlipped, regNumber, fragile);
+    }
+
+    public Cargo setRegNumber (String regNumber) {
+        return new Cargo(dimensions, weight, deliveryAddress, canBeFlipped, regNumber, fragile);
+    }
+
+    public Cargo setFragile (boolean fragile) {
+        return new Cargo(dimensions, weight, deliveryAddress, canBeFlipped, regNumber, fragile);
+    }
+
 
     public String toString () {
         return "RegNumber: " + regNumber + "\n" +

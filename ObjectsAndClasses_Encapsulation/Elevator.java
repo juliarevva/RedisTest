@@ -28,14 +28,12 @@ public class Elevator {
 
         if (floor > maxFloor || floor < minFloor) {
             System.out.println("Такого этажа не существует");
-        } else if (floor > currentFloor) {
+        } else if (floor > minFloor || floor < maxFloor) {
             while (currentFloor != floor){
-            moveUp();
-            System.out.println(currentFloor);
-            }
-        } else if (floor < currentFloor) {
-            while (currentFloor != floor) {
-            moveDown();
+                if (floor > currentFloor)
+                    moveUp();
+                if (floor < currentFloor)
+                    moveDown();
             System.out.println(currentFloor);
             }
         } else {
