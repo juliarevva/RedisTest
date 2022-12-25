@@ -1,12 +1,11 @@
 public class Elevator {
 
-    private static int currentFloor;
+    private static int currentFloor = 1;
     private static int minFloor;
     private static int maxFloor;
 
 
     public Elevator(int minFloor, int maxFloor) {
-        currentFloor = 1;
         this.minFloor = minFloor;
         this.maxFloor = maxFloor;
 
