@@ -1,8 +1,8 @@
 public class Elevator {
 
-    private static int currentFloor = 1;
-    private static int minFloor;
-    private static int maxFloor;
+    private int currentFloor = 1;
+    private int minFloor;
+    private int maxFloor;
 
 
     public Elevator(int minFloor, int maxFloor) {
@@ -11,7 +11,7 @@ public class Elevator {
 
     }
 
-    public static int getCurrentFloor() {
+    public int getCurrentFloor() {
         return currentFloor;
     }
 
