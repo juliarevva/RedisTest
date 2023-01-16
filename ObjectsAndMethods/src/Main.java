@@ -2,20 +2,18 @@ public class Main {
 
     public static void main(String[] args) {
         Basket basket = new Basket();
-        basket.add("Milk", 40, 1);
-        basket.print("Your basket");
+        basket.add("milk", 4, 1);
+        basket.add("bread", 6, 1);
+        basket.add("water", 10, 2);
+        basket.print("Ann basket");
 
-        Arithmetic arithmetic = new Arithmetic(3,4);
+        Basket basket1 = new Basket();
+        basket1.add("guitar", 1000, 1);
+        basket1.print("Vitaly basket");
 
-        arithmetic.sum();
-        arithmetic.mult();
-        arithmetic.max();
-        arithmetic.min();
-
-        System.out.println(arithmetic.sum());
-        System.out.println(arithmetic.mult());
-        System.out.println(arithmetic.max());
-        System.out.println(arithmetic.min());
+        Basket basket2 = new Basket();
+        basket2.add("dress", 400, 1);
+        basket2.add("water", 10, 1);
+        basket2.print("Julia basket");
     }
-
 }
