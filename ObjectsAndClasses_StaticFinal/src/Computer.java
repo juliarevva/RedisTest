@@ -1,7 +1,7 @@
 public class Computer {
 
-    public ComputerVendor computerVendor;
-    public String computerName;
+    private final ComputerVendor computerVendor;
+    private final String computerName;
     private CPU cpu;
     private Hard hard;
     private RAM ram;
@@ -33,15 +33,6 @@ public class Computer {
     public Screen getScreen() { return screen; }
 
     public Keyboard getKeyboard() { return keyboard; }
-
-
-    public void setComputerVendor(ComputerVendor computerVendor) {
-        this.computerVendor = computerVendor;
-    }
-
-    public void setComputerName(String computerName) {
-        this.computerName = computerName;
-    }
 
     public void setCpu(CPU cpu) {
         this.cpu = cpu;
