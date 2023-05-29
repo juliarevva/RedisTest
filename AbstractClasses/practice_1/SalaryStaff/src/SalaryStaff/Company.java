@@ -54,6 +54,11 @@ public class Company {
 
     Comparator<Employee> employeeComparator = Comparator.comparing(Employee::getMonthSalary);
 
+    public String format(ArrayList<Employee> employee) {
+        return employee.toString().replaceAll("[\\[|,\\]]", "");
+    }
+
+
     public ArrayList<Employee> getTopSalaryStaff(int count) {
         listOfSalary.sort(employeeComparator);
         Collections.reverse(listOfSalary);
@@ -61,6 +66,7 @@ public class Company {
         for (int i = 0; i < count; i++) {
             topSalary.add(listOfSalary.get(i));
         }
+        format(topSalary);
         return topSalary;
     }
 
@@ -72,6 +78,8 @@ public class Company {
         }
         return topSalary;
     }
+
+
 
 
 }

@@ -20,8 +20,8 @@ public class Main {
             company.hire(topManager);
         }
 
-        System.out.println("Самые высокие зарплаты:\n" + company.getTopSalaryStaff(15));
-        System.out.println("Самые низкие зарплаты:\n" + company.getLowestSalaryStaff(30));
+        System.out.println("Самые высокие зарплаты:\n" + company.format(company.getTopSalaryStaff(15)));
+        System.out.println("Самые низкие зарплаты:\n" + company.format(company.getLowestSalaryStaff(30)));
 
         company.setManagersCount(80 / 2);
         company.setOperatorsCount(180 / 2);
@@ -43,7 +43,9 @@ public class Main {
             company.fire(topManager);
         }
 
-        System.out.printf("После сокращения: " + "Самые высокие зарплаты\n" + company.getTopSalaryStaff(15));
-        System.out.println("После сокращения: " + "Самые низкие зарплаты\n" + company.getLowestSalaryStaff(30));
+        System.out.println("После сокращения: " + "Самые высокие зарплаты\n" + company.format(company.getTopSalaryStaff(15)));
+        System.out.println("После сокращения: " + "Самые низкие зарплаты\n" + company.format(company.getLowestSalaryStaff(30)));
+
+
     }
 }
