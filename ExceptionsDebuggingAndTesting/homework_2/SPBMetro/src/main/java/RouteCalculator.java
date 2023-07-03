@@ -93,11 +93,12 @@ public class RouteCalculator {
                     if (route.isEmpty() || route.size() > way.size()) {
                         route.clear();
                         route.addAll(way);
+                        return route;
                     }
                 }
             }
         }
-        return route;
+        return null;
     }
 
     private boolean isConnected(Station station1, Station station2) {
@@ -119,7 +120,7 @@ public class RouteCalculator {
     }
 
     private List<Station> getRouteWithTwoConnections(Station from, Station to) {
-        if (from.getLine().equals(to.getLine())) {
+        if (from.getLine().equals(to.getLine()) && getRouteWithOneConnection(from, to) != null) {
             return null;
         }
 
@@ -145,7 +146,6 @@ public class RouteCalculator {
                 }
             }
         }
-
         return route;
     }
 }
