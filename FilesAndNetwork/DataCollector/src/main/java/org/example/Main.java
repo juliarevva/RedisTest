@@ -6,11 +6,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Введите путь к директории с файлами .json  и .csv");
+//        System.out.println("Введите путь к директории с файлами .json  и .csv");
+//
+//        String path = new Scanner(System.in).nextLine();
 
-        String path = new Scanner(System.in).nextLine();
-
-//        String path = "/Users/uliarevva/Downloads/data";
+        String path = "initialFiles";
 
         CreateJSON.createMskMap(ParseWeb.createMskMetro().getNumber2line());
         CreateJSON.createStationsList(ParseWeb.createMskMetro().getNumber2line(), path);
