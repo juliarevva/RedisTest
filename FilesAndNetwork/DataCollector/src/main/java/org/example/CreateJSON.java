@@ -11,7 +11,7 @@ public class CreateJSON {
 
     public static void createMskMap(Set<Line> lines) {
 
-        String path = "data/stations.json";
+        String path = "data/map.json";
         JSONArray lineArray = new JSONArray();
         JSONArray stationArray = new JSONArray();
         JSONObject moscowMetro = new JSONObject();
