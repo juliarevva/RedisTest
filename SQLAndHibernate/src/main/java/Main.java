@@ -1,7 +1,4 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 
 public class Main {
 
@@ -16,7 +13,7 @@ public class Main {
             Statement statement = connection.createStatement();
 
             ResultSet resultSet = statement
-                    .executeQuery("SELECT course_name, COUNT(*) / MONTH(MAX(subscription_date)) salesCount FROM PurchaseList GROUP BY course_name");
+                    .executeQuery("SELECT course_name, COUNT(*) / MONTH(MAX(subscription_date)) salesCount FROM PurchaseList WHERE year(subscription_date) = 2018 GROUP BY course_name");
 
             while (resultSet.next()) {
                 String courseNameName = resultSet.getString("course_name");
