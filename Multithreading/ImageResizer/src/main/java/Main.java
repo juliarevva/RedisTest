@@ -10,8 +10,8 @@ public class Main {
 
         int countProcessors = runtime.availableProcessors();
 
-        String srcFolder = "/Users/uliarevva/Desktop/src";
-        String dstFolder = "/Users/uliarevva/Desktop/dst";
+        String srcFolder = "src/originalPhotos";
+        String dstFolder = "src/newPhotos";
 
         File srcDir = new File(srcFolder);
 
