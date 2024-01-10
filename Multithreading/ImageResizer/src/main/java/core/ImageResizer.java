@@ -1,3 +1,5 @@
+package core;
+
 import org.imgscalr.Scalr;
 
 import javax.imageio.ImageIO;
@@ -31,28 +33,6 @@ public class ImageResizer extends Thread {
                         image.getHeight() / (image.getWidth() / (double) newWidth)
                 );
 
-//                public static BufferedImage resize(int targetWidth,
-//                int targetHeight, BufferedImage.) {}
-
-//                private BufferedImage copyToBufferedImage()  {
-//                    BufferedImage bi = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
-//                    for (int i = 0; i < height; i++)
-//                        for (int j = 0; j < width; j++)
-//                            bi.setRGB(j, i, pixels[i*width +j]);
-//                    return bi;
-
-//                BufferedImage newImage = new BufferedImage(
-//                        newWidth, newHeight, BufferedImage.TYPE_INT_RGB);
-//
-//                int widthStep = image.getWidth() / newWidth;
-//                int heightStep = image.getHeight() / newHeight;
-//
-//                for (int x = 0; x < newWidth; x++) {
-//                    for (int y = 0; y < newHeight; y++) {
-//                        int rgb = image.getRGB(x * widthStep, y * heightStep);
-//                        newImage.setRGB(x, y, pixels[x*newWidth +y]);
-//                    }
-//                }
                 BufferedImage newImage = resize(image,newWidth,newHeight);
 
                 File newFile = new File(dstFolder + "/" + file.getName());

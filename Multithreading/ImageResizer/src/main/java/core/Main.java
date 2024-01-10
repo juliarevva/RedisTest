@@ -1,3 +1,7 @@
+package core;
+
+import core.ImageResizer;
+
 import java.io.File;
 
 public class Main {
