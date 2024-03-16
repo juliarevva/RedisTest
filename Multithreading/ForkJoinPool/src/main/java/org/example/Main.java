@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ForkJoinPool;
 
 
@@ -11,6 +12,7 @@ public class Main {
 
     private static StringBuilder builder = new StringBuilder();
     private static Path pathFile = Path.of("data/file.txt");
+    private static Set<String> set = ConcurrentHashMap.newKeySet();
 
     public static void main(String[] args) {
 //        String url = "https://sendel.ru";
@@ -35,9 +37,10 @@ public class Main {
 
     public static void print (Set<String> linkList, String url, String tab) {
         tab = tab + "\t";
+
         for (String link : linkList) {
             String parentLink = link.substring(0, link.lastIndexOf("/"));
-            if (parentLink.contains(url)) {
+            if (parentLink.contains(url) && set.add(link)) {
                 builder.append(tab).append(link).append("\n");
                 print(linkList, link, tab);
             }
